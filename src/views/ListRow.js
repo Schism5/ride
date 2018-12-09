@@ -16,9 +16,10 @@ class ListRow extends Component {
     render() {
         return (
             <ListItem
-                style={{padding:'25px 10px 25px 10px', borderBottom:'1px rgba(0,0,0,0.2) solid'}} 
-                button 
+                style={{padding:'25px 10px 25px 10px'}} 
+                button={false} 
                 onClick={()=>console.log('lol k')}
+                divider={true}
             >
                 <ListItemAvatar>
                     <Avatar>
@@ -26,7 +27,7 @@ class ListRow extends Component {
                     </Avatar>
                 </ListItemAvatar>
                 <ListItemText primary={this.props.item.name} secondary={this.props.item.tag}/>
-                <ListItemSecondaryAction onClick={() => {console.log(this);this.props.removeSelf(this.props.item) }}>
+                <ListItemSecondaryAction onClick={() => this.props.removeSelf(this.props.item)}>
                     <IconButton aria-label="Delete">
                         <DoneIcon />
                     </IconButton>
