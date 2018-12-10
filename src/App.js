@@ -8,21 +8,22 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <AppBar position="static">
-          <Toolbar style={{paddingLeft:'0', justifyContent:'center'}}>
-            <Typography variant="h6" color="inherit">
-              Thatz My Ride
-            </Typography>
-          </Toolbar>
-        </AppBar>
 
-        <MainList></MainList>
-      </div>
-    );
-  }
+    render() {
+        return (
+        <div>
+            <AppBar position="static">
+            <Toolbar style={{paddingLeft:'0', justifyContent:'center'}}>
+                <Typography variant="h6" color="inherit">
+                Thatz My Ride
+                </Typography>
+            </Toolbar>
+            </AppBar>
+
+            <MainList></MainList>
+        </div>
+        );
+    }
 }
 
 export default App;

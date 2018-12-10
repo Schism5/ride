@@ -8,6 +8,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 import ListRow from './ListRow';
 import { Divider } from '@material-ui/core';
+import axios from 'axios';
 
 class MainList extends Component {
     constructor(props) {
@@ -22,6 +23,8 @@ class MainList extends Component {
             modalOpen: false,
             selected: {}
         };
+
+        axios.get('/ping').then(resp => console.log(resp));
 
         this.removeItem = this.removeItem.bind(this);
         this.showModal = this.showModal.bind(this);
